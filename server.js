@@ -57,6 +57,16 @@ app.put("/persiana/status", function(req, res) {
   res.send(200);
 })
 
+app.put("/ventilador/modo", function(req, res) {
+  status.ventiladorManual = !status.ventiladorManual;
+  res.send(200);
+})
+
+app.put("/lampada/modo", function(req, res) {
+  status.lampadaManual = !status.lampadaManual;
+  res.send(200);
+})
+
 app.listen(port, function () {
 
     console.log("Server running! Press CTRL+C to close");

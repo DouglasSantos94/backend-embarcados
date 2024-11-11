@@ -44,27 +44,27 @@ app.get("/persiana/status", function(req, res) {
 
 app.put("/ventilador/status", function(req, res) {
   status.ventiladorLigado = !status.ventiladorLigado;
-  res.send(200);
+  res.sendStatus(200);
 })
 
 app.put("/lampada/status", function(req, res) {
   status.lampadaLigada = !status.lampadaLigada;
-  res.send(200);
+  res.sendStatus(200);
 })
 
 app.put("/persiana/status", function(req, res) {
   status.persianaAberta = !status.persianaAberta;
-  res.send(200);
+  res.sendStatus(200);
 })
 
 app.put("/ventilador/modo", function(req, res) {
   status.ventiladorManual = !status.ventiladorManual;
-  res.send(200);
+  res.sendStatus(200);
 })
 
 app.put("/lampada/modo", function(req, res) {
   status.lampadaManual = !status.lampadaManual;
-  res.send(200);
+  res.sendStatus(200);
 })
 
 app.listen(port, function () {

@@ -1,32 +1,34 @@
+const repositorioCircuito = require('../repository/circuito');
+
 module.exports = {
   getStatusLampada: async (req, res) => {
-    const statusLampada = true;
+    const statusLampada = repositorioCircuito.statusLampada();
 
     res.status(200).send(statusLampada);
   },
   getModoLampada: async (req, res) => {
-    const modoLampada = true;
+    const modoLampada = repositorioCircuito.modoLampada;
 
     res.status(200).send(modoLampada);
   },
   getStatusPersiana: async (req, res) => {
-    const statusPersiana = true;
+    const statusPersiana = repositorioCircuito.statusPersiana;
 
     res.status(200).send(statusPersiana);
   },
   alterarStatusLampada: async (req, res) => {
-    const statusLampada = true;
+    repositorioCircuito.alterarStatusLampada();
 
-    res.status(200).send(statusLampada);
+    res.sendStatus(200);
   },
   alterarModoLampada: async (req, res) => {
-    const modoLampada = true;
+    repositorioCircuito.alterarModoLampada();
 
-    res.status(200).send(modoLampada);
+    res.sendStatus(200);
   },
   alterarStatusPersiana: async (req, res) => {
-    const statusPersiana = true;
+    repositorioCircuito.alterarStatusPersiana();
 
-    res.status(200).send(statusPersiana);
+    res.sendStatus(200);
   }
 }

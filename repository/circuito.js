@@ -1,20 +1,29 @@
 const status =  {
-  lampadaLigada: true,
-  lampadaManual: true,
-  persianaAberta: true
+  lampadaLigada: false,
+  lampadaManual: false,
+  persianaAberta: false
 };
 
 module.exports = {
   statusLampada: () => status.lampadaLigada,
   modoLampada: () => status.lampadaManual,
   statusPersiana: () => status.persianaAberta,
-  alterarStatusPersiana: () => {
-    status.persianaAberta = !status.persianaAberta;
+  abrirPersiana: () => {
+    status.persianaAberta = true;
   },
-  alterarStatusLampada: () => {
-    status.lampadaLigada = !status.lampadaLigada;
+  fecharPersiana: () => {
+    status.persianaAberta = false;
   },
-  alterarModoLampada: () => {
-    status.lampadaManual = !status.lampadaManual;
+  acenderLampada: () => {
+    status.lampadaLigada = true;
+  },
+  apagarLampada: () => {
+    status.lampadaLigada = false;
+  },
+  setModoLampadaManual: () => {
+    status.lampadaManual = true;
+  },
+  setModoLampadaAutomatico: () => {
+    status.lampadaManual = false;
   },
 }

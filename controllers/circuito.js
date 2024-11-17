@@ -7,12 +7,12 @@ module.exports = {
     res.status(200).send(statusLampada);
   },
   getModoLampada: async (req, res) => {
-    const modoLampada = repositorioCircuito.modoLampada;
+    const modoLampada = repositorioCircuito.modoLampada();
 
     res.status(200).send(modoLampada);
   },
   getStatusPersiana: async (req, res) => {
-    const statusPersiana = repositorioCircuito.statusPersiana;
+    const statusPersiana = repositorioCircuito.statusPersiana();
 
     res.status(200).send(statusPersiana);
   },

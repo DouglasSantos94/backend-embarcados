@@ -10,8 +10,12 @@ router.use(express.urlencoded({
 router.get('/lampada/status', circuitoController.getStatusLampada);
 router.get('/lampada/modo', circuitoController.getModoLampada);
 router.get('/persiana/status', circuitoController.getStatusPersiana);
-router.put('/lampada/status', circuitoController.alterarStatusLampada);
-router.put('/lampada/modo', circuitoController.alterarModoLampada);
-router.put('/persiana/status', circuitoController.alterarStatusPersiana);
+router.put('/lampada/acender', circuitoController.acenderLampada);
+router.put('/lampada/apagar', circuitoController.apagarLampada);
+router.put('/lampada/manual', circuitoController.setModoLampadaManual);
+router.put('/lampada/automatico', circuitoController.setModoLampadaAutomatico);
+router.put('/persiana/abrir', circuitoController.abrirPersiana);
+router.put('/persiana/fechar', circuitoController.fecharPersiana);
+
 
 module.exports = router;

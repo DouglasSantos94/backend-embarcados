@@ -16,18 +16,33 @@ module.exports = {
 
     res.status(200).send(statusPersiana);
   },
-  alterarStatusLampada: async (req, res) => {
-    repositorioCircuito.alterarStatusLampada();
+  setModoLampadaManual: async (req, res) => {
+    repositorioCircuito.setModoLampadaManual();
 
     res.sendStatus(200);
   },
-  alterarModoLampada: async (req, res) => {
-    repositorioCircuito.alterarModoLampada();
+  setModoLampadaAutomatico: async (req, res) => {
+    repositorioCircuito.setModoLampadaAutomatico();
 
     res.sendStatus(200);
   },
-  alterarStatusPersiana: async (req, res) => {
-    repositorioCircuito.alterarStatusPersiana();
+  acenderLampada: async (req, res) => {
+    repositorioCircuito.acenderLampada();
+
+    res.sendStatus(200);
+  },
+  apagarLampada: async (req, res) => {
+    repositorioCircuito.apagarLampada();
+
+    res.sendStatus(200);
+  },
+  abrirPersiana: async (req, res) => {
+    repositorioCircuito.abrirPersiana();
+
+    res.sendStatus(200);
+  },
+  fecharPersiana: async (req, res) => {
+    repositorioCircuito.fecharPersiana();
 
     res.sendStatus(200);
   }
